@@ -43,10 +43,11 @@ public class Room {
     @Override
     public String toString() {
         return "Room{" +
-                "numberOfBeds=" + numberOfBeds +
-                ", price=" + price +
-                ", isOccupied=" + isOccupied +
-                ", isDirty=" + isDirty +
+                "The numbers of bed in this room is: " + numberOfBeds +
+                " | the price is: " + price +
+                " | Occupied: " + isOccupied +
+                " | Dirty: " + isDirty +
+                " | Available: " + isAvailable() +
                 '}';
     }
 }
