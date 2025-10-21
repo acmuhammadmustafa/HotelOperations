@@ -40,6 +40,41 @@ public class Room {
 //        }
     }
 
+    public void checkIn(){
+        if (isAvailable()){
+            this.isDirty = true;
+            this.isOccupied = true;
+            System.out.println("Guest Checked in.");
+        }
+        else {
+            System.out.println("Cannot check in.");
+        }
+    }
+
+    public void checkOut(){
+        if (!isAvailable()){
+            this.isDirty = true;
+            this.isOccupied = false;
+            System.out.println("Guest checked out");
+        }
+        else {
+            System.out.println("Guest cannot check out");
+        }
+    }
+
+    public void cleanRoom(){
+        if (isDirty && !isOccupied){
+            this.isDirty = false;
+        } else if (isOccupied) {
+            System.out.println("Cannot be cleaned as room is occupied.");
+        } else if (!isDirty) {
+            System.out.println("Cannot be cleaned as already clean.");
+        } else {
+            System.out.println("Something went wrong.");
+        }
+    }
+
+
     @Override
     public String toString() {
         return "Room{" +

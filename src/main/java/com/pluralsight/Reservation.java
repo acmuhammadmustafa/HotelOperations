@@ -5,12 +5,12 @@ public class Reservation {
     private String roomType;
     private int numberOfNights;
     private boolean isWeekend;
+
     public Reservation(String roomType, int numberOfNights, boolean isWeekend) {
         this.roomType = roomType;
         this.numberOfNights = numberOfNights;
         this.isWeekend = isWeekend;
     }
-
 
     public String getRoomType() {
         return roomType;
@@ -36,11 +36,6 @@ public class Reservation {
         isWeekend = weekend;
     }
 
-// The room type can be either "king" or "double". If the room type is "king" the
-// price per night is $139.00 if the room type is "double" the price per night is
-// $124.00.
-
-
     public double getPrice(){
 
 //        The room type can be either "king" or "double". If the room type is "king" the
@@ -55,6 +50,7 @@ public class Reservation {
         }
         else {
             return 0;
+            //todo: this should never really happen maybe throw an exception instead?
         }
 
         if(isWeekend){
